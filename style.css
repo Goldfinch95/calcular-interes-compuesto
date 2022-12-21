@@ -15,17 +15,18 @@ body {
 .contenedor__datos{
     /*border: 1px solid #41464d;*/
     width: 100%;
-    height: 80vh;
+    display: flex;
+    justify-content: center;
 }
 
 .vidrio{
-    /*border: 1px solid #41464d;*/
-    display: flex;
+    /*border: 1px solid #41464d;
+    */display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: #002854;
-    max-width: 100%;
+    max-width: 50%;
     height: 100%;
     padding: 2em;
     margin: 2em;
@@ -33,10 +34,14 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.2px);
     -webkit-backdrop-filter: blur(4.2px);
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
 }
 
 input{
-    width: 100%;
+    width: 80%;
     margin: 25px;
     text-align: center;
     background: #eaeaea;
@@ -75,7 +80,7 @@ button:hover{
 }
 
 .resultados{
-    width: 50%;
+    width: 100%;
     height: 100%;
     border: 1px solid #41464d;
     display: none;
@@ -83,7 +88,6 @@ button:hover{
     justify-content: center;
     position: relative;
     color: #fff;
-    text-align: center;
     background: #002854;
     border: none;
     outline: none;
@@ -91,6 +95,7 @@ button:hover{
     /*border: 1px solid #0e7bc4;*/
     font-size: 18px;
     letter-spacing: 1px;
+    
 }
 
 .periodo{
@@ -100,17 +105,19 @@ button:hover{
     right: 2%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     border: none;
     outline: none;
     border-radius: 35px;
     /*border: 1px solid #0e7bc4;*/
     font-size: 18px;
     letter-spacing: 1px;
+    padding: 0%;
 }
+
 
 .resultado{
     position: relative;
+    top: 50px;
     left: 30%;
     width:40%;
     text-align: center;
@@ -124,4 +131,21 @@ button:hover{
     letter-spacing: 1px;
 }
 
+.csv{
+    position: relative;
+    left: 30%;
+    width:40%;
+    text-align: center;
+    background: #eaeaea;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #e68b08;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
 
+.csv:hover{
+    background-color: #6b8baf;
+}
