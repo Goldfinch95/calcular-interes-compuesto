@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <main>
+        <div class="container__all">
+            <!--Cajas traseras-->
+            <div class="box__back">
+                <div  id="login__box-back">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="button__start-session">Iniciar Sesión</button>
+                </div>
+                <div  id="register__box-back">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="button__register">Registrarse</button>
+                </div>
+            </div>
+            <!--Formulario de login y registro-->
+            <div  id="container__login-register" class="container__login-register">
+                <!--login-->
+                <form action="" id="form__login" class="form__login">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="text" id="input__email" placeholder="Correo Electrónico">
+                    <input type="password" id="input__password" placeholder="Contraseña">
+                    <button id="button__login">Entrar</button>
+                </form>
+                <!--registro-->
+                <form action="" id="form__register" class="form__register">
+                    <h2>Registrarse</h2>
+                    <input type="text" id="input__register-name" placeholder="Nombre Completo">
+                    <input type="text" id="input__register-email" placeholder="Correo Electrónico">
+                    <input type="text" id="input__register-user" placeholder="Usuario">
+                    <input type="password" id="input__register-password" placeholder="Contraseña">
+                    <button id="button__to-register">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/register.js"></script>
+</body>
+</html>
