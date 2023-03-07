@@ -1,20 +1,20 @@
-const email = document.getElementById("input__email");
-const password = document.getElementById("input__password");
-const inputName = document.getElementById("input__register-name");
-const inputEmail = document.getElementById("input__register-email");
-const inputUser = document.getElementById("input__register-user");
-const inputPassword = document.getElementById("input__register-password");
-const btnLogin = document.getElementById("button__login");
-const btnRegisterSecond = document.getElementById("button__to-register");
+const inputEmailLogin = document.getElementById("input__email");
+const inputPasswordLogin = document.getElementById("input__password");
+const inputNameRegister = document.getElementById("input__register-name");
+const inputEmailRegister = document.getElementById("input__register-email");
+const inputUserRegister = document.getElementById("input__register-user");
+const inputPasswordRegister = document.getElementById("input__register-password");
+const btnLoginForm = document.getElementById("button__login");
+const btnRegisterForm = document.getElementById("button__to-register");
 
 
-const register = async()=>{
+const registerUser = async()=>{
     const url = 'http://localhost:3000/register/login'
     const data = {
-        name: inputName.value,
-        email: inputEmail.value,
-        user: inputUser.value,
-        password: inputPassword.value
+        name: inputNameRegister.value,
+        email: inputEmailRegister.value,
+        user: inputUserRegister.value,
+        password: inputPasswordRegister.value
     }
     const answer = await fetch(url,{body: JSON.stringify(data), method: "POST", headers:{ "Content-type": "application/json; charset=UTF-8" }})
     if(answer.status == 200){
@@ -25,11 +25,11 @@ const register = async()=>{
     }
 }
 
-const verify = async ()=>{
+const verifyUser = async ()=>{
     const verifyUrl = 'http://localhost:3000/verify/login'
     const data = {
-        email: email.value,
-        password: password.value
+        email: inputEmailLogin.value,
+        password: inputPasswordLogin.value
     }
     const answer = await fetch(verifyUrl,{body: JSON.stringify(data), method: "POST", headers:{ "Content-type": "application/json; charset=UTF-8" }})
     if(answer.status == 200){
@@ -40,14 +40,14 @@ const verify = async ()=>{
     }
 }
 
-btnLogin.addEventListener("click", (e)=>{
+btnLoginForm.addEventListener("click", (e)=>{
     e.preventDefault();
-    verify();
+    verifyUser();
 })
 
-btnRegisterSecond.addEventListener("click", (e)=>{
+btnRegisterForm.addEventListener("click", (e)=>{
     e.preventDefault();
-    register();
+    registerUser();
 })
 
 

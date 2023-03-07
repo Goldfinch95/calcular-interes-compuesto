@@ -1,64 +1,64 @@
 //variables
-const contenedor_login_register = document.getElementById("container__login-register");
-const formulario_login = document.getElementById("form__login");
-const formulario_register = document.getElementById("form__register");
-const caja_trasera_login = document.getElementById("login__box-back");
-const caja_trasera_register = document.getElementById("register__box-back");
-const btn_registrarse = document.getElementById("button__register");
-const btn_iniciarSesion = document.getElementById("button__start-session");
+const containerLoginRegister = document.getElementById("container__login-register");
+const formLogin = document.getElementById("form__login");
+const formRegister = document.getElementById("form__register");
+const loginBoxBack = document.getElementById("login__box-back");
+const registerBoxBack = document.getElementById("register__box-back");
+const btnRegister = document.getElementById("button__register");
+const btnStartSession = document.getElementById("button__start-session");
 
 //funciones
-const anchoPagina = () =>{
+const resizePageWidth = () =>{
     if(window.innerWidth > 850){
-        caja_trasera_login.style.display = "block";
-        caja_trasera_register.style.display ="block";
+        loginBoxBack.style.display = "block";
+        registerBoxBack.style.display ="block";
     }else{
-        caja_trasera_register.style.display = "block";
-        caja_trasera_register.style.opacity = "1";
-        caja_trasera_login.style.display = "none";
-        formulario_login.style.display = "block";
-        formulario_register.style.display = "none";
-        contenedor_login_register.style.left = "0px";
+        registerBoxBack.style.display = "block";
+        registerBoxBack.style.opacity = "1";
+        loginBoxBack.style.display = "none";
+        formLogin.style.display = "block";
+        formRegister.style.display = "none";
+        containerLoginRegister.style.left = "0px";
     }
 }
 
-const iniciarSesion = () =>{
+const accessTheLoginForm = () =>{
 
     if(window.innerWidth > 850){
-        formulario_register.style.display = "none";
-        contenedor_login_register.style.left = "10px";
-        formulario_login.style.display = "block";
-        caja_trasera_register.style.opacity = "1";
-        caja_trasera_login.style.opacity = "0";
+        formRegister.style.display = "none";
+        containerLoginRegister.style.left = "10px";
+        formLogin.style.display = "block";
+        registerBoxBack.style.opacity = "1";
+        loginBoxBack.style.opacity = "0";
     }else{
-        formulario_register.style.display = "none";
-        contenedor_login_register.style.left = "0px";
-        formulario_login.style.display = "block";
-        caja_trasera_register.style.display = "block";
-        caja_trasera_login.style.display = "none";
+        formRegister.style.display = "none";
+        containerLoginRegister.style.left = "0px";
+        formLogin.style.display = "block";
+        registerBoxBack.style.display = "block";
+        loginBoxBack.style.display = "none";
     }
 }
 
-const visualRegister = () =>{
+const accessTheRegistrationForm = () =>{
     if(window.innerWidth > 850){
-        formulario_register.style.display = "block";
-        contenedor_login_register.style.left = "410px";
-        formulario_login.style.display = "none";
-        caja_trasera_register.style.opacity = "0";
-        caja_trasera_login.style.opacity = "1";
+        formRegister.style.display = "block";
+        containerLoginRegister.style.left = "410px";
+        formLogin.style.display = "none";
+        registerBoxBack.style.opacity = "0";
+        loginBoxBack.style.opacity = "1";
     }else{
-        formulario_register.style.display = "block";
-        contenedor_login_register.style.left = "0px";
-        formulario_login.style.display = "none";
-        caja_trasera_register.style.display = "none";
-        caja_trasera_login.style.display = "block";
-        caja_trasera_login.style.opacity = "1";
+        formRegister.style.display = "block";
+        containerLoginRegister.style.left = "0px";
+        formLogin.style.display = "none";
+        registerBoxBack.style.display = "none";
+        loginBoxBack.style.display = "block";
+        loginBoxBack.style.opacity = "1";
     }
 }
 
 //llamando funciones
 
-anchoPagina();
-window.addEventListener("resize", anchoPagina);
-btn_registrarse.addEventListener("click", visualRegister);
-btn_iniciarSesion.addEventListener("click", iniciarSesion);
+resizePageWidth();
+window.addEventListener("resize", resizePageWidth);
+btnRegister.addEventListener("click", accessTheRegistrationForm);
+btnStartSession.addEventListener("click", accessTheLoginForm);

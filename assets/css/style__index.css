@@ -12,14 +12,14 @@ body {
 }
 
 
-.contenedor__datos{
+.container__box{
     /*border: 1px solid #41464d;*/
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.vidrio{
+.glass__box{
     /*border: 1px solid #41464d;
     */display: flex;
     justify-content: center;
@@ -79,7 +79,7 @@ button:hover{
     background-color: #6b8baf;
 }
 
-.resultados{
+.glass__box-results{
     width: 100%;
     height: 100%;
     border: 1px solid #41464d;
@@ -98,7 +98,7 @@ button:hover{
     
 }
 
-.periodo{
+.periods__data{
     position: relative;
     width: 100%;
     height: 80%;
@@ -115,7 +115,7 @@ button:hover{
 }
 
 
-.resultado{
+.result__data{
     position: relative;
     top: 50px;
     left: 30%;
@@ -131,7 +131,7 @@ button:hover{
     letter-spacing: 1px;
 }
 
-.csv{
+.button__csv{
     position: relative;
     left: 30%;
     width:40%;
@@ -146,6 +146,6 @@ button:hover{
     letter-spacing: 1px;
 }
 
-.csv:hover{
+.button__csv:hover{
     background-color: #6b8baf;
 }
