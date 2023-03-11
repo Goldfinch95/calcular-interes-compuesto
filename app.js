@@ -59,6 +59,23 @@ app.post('/verify/login', (req, res) =>{
         }
       })
 })
+
+//*añadir los datos del csv a mysql.
+
+app.post('/add/data', (req,res) => {
+    const {rendimientos} = req.body
+    const addData = `INSERT INTO datos(rendimientos)VALUES ("${rendimientos}");`
+    db.query(addData,(error,results, fields)=>{
+        if(error){
+            return res.status(400).send({message:'unregistered data'});
+        }
+        else{
+            console.log(results);
+            res.status(200).send({message:"registered data"})
+        }
+    })
+})
+
 //*llamando al puerto 3000 (cortesía de express)
 app.listen(3000)
 

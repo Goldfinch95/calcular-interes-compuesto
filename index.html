@@ -40,12 +40,14 @@
             <input  id ="input__capital" type="number" min="0" oninput="validity.valid||(value='');" pattern="^[0-9]+" placeholder="Ingrese su capital">
             <input id ="input__interest-time" type="number" min="0" oninput="validity.valid||(value='');" pattern="^[0-9]+" placeholder="Ingrese su tasa de interés">
             <input id ="input__time" type="number" min="0" oninput="validity.valid||(value='');" pattern="^[0-9]+" placeholder="Ingrese el tiempo del interés">
+            <button id="button__trash"><i class="bi bi-trash-fill"></i></button>
             <button id="button__send" type="submit">enviar</button>
           </div>
           <div class="glass__box-results" id="glass__box-results">
             <ul class="periods__data" id="periods__data"></ul>
             <ul  class="result__data" id="result__data"></ul>
-            <button class="button__csv" id="button__download-csv" type="button">Descargar</button>
+            <button class="button__csv" id="button__back"><i class="bi bi-caret-left-fill"></i></button>
+            <button class="button__csv" id="button__download-csv" type="button"><i class="bi bi-file-earmark-arrow-down-fill"></i></button>
           </div>
         </div>
       </div>
