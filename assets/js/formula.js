@@ -54,7 +54,6 @@ const showInputsBox = ()=>{
 }
 
 const addList = (interest, capitalFinal)=>{
-    console.log(interest, capitalFinal)
     for(i=0; i < interest[i]; i++){
         let li = document.createElement('ul');
         li.innerHTML = `En el periodo ${i + 1} tus rendimientos fueron de: ${interest[i].toFixed(2)}<br>`;
@@ -78,6 +77,7 @@ const uploadData = (interest, capitalFinal)=>{
     })}
 }
 
+
 const descargarCsv = (filename, csvData)=>{
     const link = document.createElement("a");
     link.setAttribute("href", `data:text/csv;charset=utf-8,${csvData}`);
@@ -86,6 +86,11 @@ const descargarCsv = (filename, csvData)=>{
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+}
+
+const DeleteListAndResult = ()=>{
+    /*liPeriodsData.removeChild(list);*/
+    result.innerHTML = ``;
 }
 
 
@@ -103,6 +108,8 @@ btnDelete.addEventListener("click", ()=>{
 btnBack.addEventListener("click",()=>{
     showInputsBox();
     deleteInputValues();
+    liPeriodsData.innerHTML = '';
+    result.innerHTML = '';
 })
 
 btnDownloadCSV.addEventListener("click", () =>{
